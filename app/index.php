@@ -44,3 +44,15 @@ $app->get('[/]', function (Request $request, Response $response) {
 });
 
 $app->run();
+
+/*EXPLICACION DE POR QUE SE PUEDE HACER ESO
+
+Static class methods can also be passed without instantiating an object of that class by passing the class name instead of an object at index 0.
+  // Only from inside the same class
+  $this->processSomething([__CLASS__, 'myStaticCallback']);
+  // From either inside or outside the same class
+  $myObject->processSomething(['\Namespace\MyClass', 'myStaticCallback']);
+  $myObject->processSomething(['\Namespace\MyClass::myStaticCallback']); // PHP 5.2.3+
+  $myObject->processSomething([MyClass::class, 'myStaticCallback']); // PHP 5.5.0+
+
+*/
