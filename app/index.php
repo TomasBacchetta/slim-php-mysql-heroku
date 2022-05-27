@@ -24,6 +24,9 @@ $dotenv->safeLoad();
 // Instantiate App
 $app = AppFactory::create();
 
+// Set base path
+//$app->setBasePath('/app');
+
 // Add error middleware
 $app->addErrorMiddleware(true, true, true);
 
@@ -38,7 +41,7 @@ $app->group('/usuarios', function (RouteCollectorProxy $group) {
   });
 
 $app->get('[/]', function (Request $request, Response $response) {    
-    $response->getBody()->write("Slim Framework 4 PHP aa");
+    $response->getBody()->write("Slim Framework 4 PHP");
     return $response;
 
 });
