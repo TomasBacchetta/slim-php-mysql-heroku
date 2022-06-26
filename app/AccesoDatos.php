@@ -1,4 +1,14 @@
 <?php
+
+/*
+BACCHETTA, TOMÁS
+TP PROGRAMACION 3 "LA COMANDA"
+SPRINT 1
+ALTA
+VISUALIZACION
+BASE DE DATOS
+
+*/
 class AccesoDatos
 {
     private static $objAccesoDatos;
